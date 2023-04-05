@@ -74,4 +74,21 @@ class myController extends Controller
             echo "Khong co file";
         }
     }
+
+    public function getJson()
+    {
+        $array = ['llllllll','aaaa'];
+        return response()->json($array);
+    }
+
+    public function myView()
+    {
+        return view('view.KhoaPham');
+    }
+
+    public function Time($t)
+    {
+        return view('myView',['time'=>$t]);
+    }
+    
 }
